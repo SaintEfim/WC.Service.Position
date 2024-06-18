@@ -6,9 +6,47 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Data", "src\WC.Service.Positions.Data\WC.Service.Positions.Data.csproj", "{DBAE13B8-D573-48C0-9654-E9966CD4DAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Data.Abstractions", "src\WC.Service.Positions.Data.Abstractions\WC.Service.Positions.Data.Abstractions.csproj", "{13D77C96-B02A-4A47-8CC0-34A0D4900449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Data.PostgreSql", "src\WC.Service.Positions.Data.PostgreSql\WC.Service.Positions.Data.PostgreSql.csproj", "{CBEF8B09-5EE8-40DB-867C-97A69D2E6946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Domain", "src\WC.Service.Positions.Domain\WC.Service.Positions.Domain.csproj", "{26F41868-109A-4148-B264-3C054FABC6A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Domain.Abstractions", "src\WC.Service.Positions.Domain.Abstractions\WC.Service.Positions.Domain.Abstractions.csproj", "{07594262-12AD-49E3-A472-2046440127E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.API", "src\WC.Service.Positions.API\WC.Service.Positions.API.csproj", "{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBAE13B8-D573-48C0-9654-E9966CD4DAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAE13B8-D573-48C0-9654-E9966CD4DAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAE13B8-D573-48C0-9654-E9966CD4DAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAE13B8-D573-48C0-9654-E9966CD4DAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D77C96-B02A-4A47-8CC0-34A0D4900449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D77C96-B02A-4A47-8CC0-34A0D4900449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D77C96-B02A-4A47-8CC0-34A0D4900449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D77C96-B02A-4A47-8CC0-34A0D4900449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEF8B09-5EE8-40DB-867C-97A69D2E6946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEF8B09-5EE8-40DB-867C-97A69D2E6946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEF8B09-5EE8-40DB-867C-97A69D2E6946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEF8B09-5EE8-40DB-867C-97A69D2E6946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F41868-109A-4148-B264-3C054FABC6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F41868-109A-4148-B264-3C054FABC6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F41868-109A-4148-B264-3C054FABC6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F41868-109A-4148-B264-3C054FABC6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07594262-12AD-49E3-A472-2046440127E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07594262-12AD-49E3-A472-2046440127E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07594262-12AD-49E3-A472-2046440127E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07594262-12AD-49E3-A472-2046440127E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

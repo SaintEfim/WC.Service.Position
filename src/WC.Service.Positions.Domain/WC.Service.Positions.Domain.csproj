@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="8.0.0" />
+      <PackageReference Include="WC.Library.Domain" Version="1.0.12" />
+      <PackageReference Include="WC.Library.Employee.Shared" Version="1.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WC.Service.Positions.Data.Abstractions\WC.Service.Positions.Data.Abstractions.csproj" />
+      <ProjectReference Include="..\WC.Service.Positions.Data.PostgreSql\WC.Service.Positions.Data.PostgreSql.csproj" />
+      <ProjectReference Include="..\WC.Service.Positions.Domain.Abstractions\WC.Service.Positions.Domain.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
