@@ -11,12 +11,14 @@ public class PositionCreateDbValidator : AbstractValidator<PositionModel>
         RuleFor(x => x)
             .CustomAsync(async (positionModel, context, cancellationToken) =>
             {
-                var position = await positionProvider.GetOneById(positionModel.Id, cancellationToken);
+                var positions = await positionProvider.Get(cancellationToken);
 
-                if (position != null)
+                var duplicatePosition = positions.Any(x => x.Name == positionModel.Name);
+
+                if (duplicatePosition)
                 {
-                    context.AddFailure("Position", "Duplicate position found.");
+                    context.AddFailure(nameof(PositionModel.Name), "Position with this name already exists.");
                 }
-            });
+            }); 
     }
 }
