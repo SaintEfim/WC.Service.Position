@@ -17,8 +17,9 @@ public class PositionCreateDbValidator : AbstractValidator<PositionModel>
 
                 if (duplicatePosition)
                 {
-                    context.AddFailure(nameof(PositionModel.Name), "Position with this name already exists.");
+                    context.AddFailure(nameof(PositionModel.Name),
+                        $"Position with this {positionModel.Name} already exists.");
                 }
-            }); 
+            });
     }
 }
