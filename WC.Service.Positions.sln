@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.API", "src\WC.Service.Positions.API\WC.Service.Positions.API.csproj", "{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC.Service.Positions.gRPC.Server", "src\WC.Service.Positions.gRPC.Server\WC.Service.Positions.gRPC.Server.csproj", "{FA908092-53C0-4D49-A42F-18797C65DB07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DB04259-8162-4FA5-AEE2-EFC3CE860AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA908092-53C0-4D49-A42F-18797C65DB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA908092-53C0-4D49-A42F-18797C65DB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA908092-53C0-4D49-A42F-18797C65DB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA908092-53C0-4D49-A42F-18797C65DB07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
