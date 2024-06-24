@@ -1,16 +1,16 @@
-using WC.Service.Positions.gRPC.Server.Services;
+using Autofac.Extensions.DependencyInjection;
 
-var builder = WebApplication.CreateBuilder(args);
+namespace WC.Service.Positions.gRPC.Server;
 
-// Add services to the container.
-builder.Services.AddGrpc();
+public static class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args).Build().Run();
+    }
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterPositionsService>();
-app.MapGet("/",
-    () =>
-        "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
-
-app.Run();
+    private static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+            .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+}

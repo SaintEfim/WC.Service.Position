@@ -3,4 +3,8 @@ using WC.Service.Positions.Domain.Abstractions.Models;
 
 namespace WC.Service.Positions.Domain.Abstractions.Services;
 
-public interface IPositionProvider : IDataProvider<PositionModel>;
+public interface IPositionProvider : IDataProvider<PositionModel>
+{
+    Task<bool> CheckPosition(PositionModel position,
+        CancellationToken cancellationToken = default);
+}

@@ -15,4 +15,10 @@ public class PositionProvider : DataProviderBase<PositionProvider, IPositionRepo
         mapper, logger, repository)
     {
     }
+
+    public async Task<bool> CheckPosition(PositionModel position, CancellationToken cancellationToken = default)
+    {
+        var positions = await Repository.Get(cancellationToken);
+        return positions.Any(x => x.Name == position.Name);
+    }
 }
