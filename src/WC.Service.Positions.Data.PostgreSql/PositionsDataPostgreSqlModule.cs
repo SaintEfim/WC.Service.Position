@@ -14,11 +14,11 @@ public class PositionsDataPostgreSqlModule : Module
             .AsClosedTypesOf(typeof(IRepository<>))
             .AsImplementedInterfaces();
 
-        builder.RegisterType<PositionDnContextFactory>()
+        builder.RegisterType<PositionDbContextFactory>()
             .AsSelf()
             .SingleInstance();
 
-        builder.Register(c => c.Resolve<PositionDnContextFactory>().CreateDbContext())
+        builder.Register(c => c.Resolve<PositionDbContextFactory>().CreateDbContext())
             .As<PositionDbContext>()
             .As<DbContext>()
             .InstancePerLifetimeScope();
