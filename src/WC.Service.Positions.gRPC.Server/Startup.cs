@@ -1,45 +1,26 @@
 ﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
+using WC.Library.Web.Startup;
+using WC.Service.Positions.Domain;
 using WC.Service.Positions.gRPC.Server.Services;
 
 namespace WC.Service.Positions.gRPC.Server;
 
-public class Startup
+internal sealed class Startup : StartupGrpcBase
 {
-    public void ConfigureServices(IServiceCollection services)
+    public Startup(WebApplicationBuilder builder) : base(builder)
     {
-        services.AddGrpc();
-        services.AddAutoMapper(typeof(AutoMapperProfile));
-        services.AddAutoMapper(typeof(WC.Service.Positions.Domain.AutoMapperProfile));
-
-        var containerBuilder = new ContainerBuilder();
-        containerBuilder.Populate(services);
-        containerBuilder.RegisterModule<EmployeesServerModule>();
-
-        var container = containerBuilder.Build();
-        var serviceProvider = new AutofacServiceProvider(container);
-
-        services.AddSingleton<IServiceProvider>(serviceProvider);
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public override void ConfigureContainer(ContainerBuilder containerBuilder)
     {
-        if (env.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
+        base.ConfigureContainer(containerBuilder);
 
-        app.UseRouting();
+        containerBuilder.RegisterModule<PositionsDomainModule>();
+    }
 
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapGrpcService<GreeterPositionsService>();
-            endpoints.MapGet("/",
-                async context =>
-                {
-                    await context.Response.WriteAsync(
-                        "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
-                });
-        });
+    public override void Configure(WebApplication app)
+    {
+        base.Configure(app);
+        app.MapGrpcService<GreeterPositionsService>();
     }
 }

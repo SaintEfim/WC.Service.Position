@@ -7,13 +7,11 @@ namespace WC.Service.Positions.gRPC.Server.Services;
 
 public class GreeterPositionsService : GreeterPositions.GreeterPositionsBase
 {
-    private readonly ILogger<GreeterPositionsService> _logger;
     private readonly IPositionProvider _provider;
     private readonly IMapper _mapper;
 
-    public GreeterPositionsService(ILogger<GreeterPositionsService> logger, IPositionProvider provider, IMapper mapper)
+    public GreeterPositionsService(IPositionProvider provider, IMapper mapper)
     {
-        _logger = logger;
         _provider = provider;
         _mapper = mapper;
     }
