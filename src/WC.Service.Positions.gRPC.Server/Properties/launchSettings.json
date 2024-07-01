@@ -1,10 +1,10 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "WC.Service.Position.gRPC.Server": {
+    "WC.Service.Positions.gRPC.Server": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "applicationUrl": "https://localhost:1002",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

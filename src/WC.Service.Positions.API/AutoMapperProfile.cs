@@ -10,7 +10,9 @@ public sealed class AutoMapperProfile : Profile
     public AutoMapperProfile()
     {
         CreateMap<PositionModel, CreateActionResultDto>();
+        
         CreateMap<PositionCreateDto, PositionModel>();
+        
         CreateMap<PositionModel, PositionDto>().ReverseMap();
     }
 }
